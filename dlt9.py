@@ -9,21 +9,21 @@ com_number=["32","12","05","01","17",["04","11"]]#这个不解释
 exitFlag = 0
 
 class myThread (threading.Thread):   #继承父类threading.Thread
-    def __init__(self, threadID, name,filename,xh):
+    def __init__(self, threadID, name,filename):
         threading.Thread.__init__(self)
         self.threadID = threadID
         self.name = name
         self.filename = filename
-		self.xh=xh
+		
     def run(self):                   #把要执行的代码写到run函数里面 线程在创建后会直接运行run函数 
         print ("Starting " + self.name)
-        play_dlt(self.name, self.filename,self.xh)
+        play_dlt(self.name, self.filename,self)
         print ("Exiting " + self.name)
-def play_dlt(threadName, filename,xh):
+def play_dlt(threadName, filename):
     
         if exitFlag:
             thread.exit()
-        dlt(filename,xh)
+        dlt(filename)
         
 
 
@@ -110,7 +110,7 @@ def dlt(fp1,xh):
 	
         
 	
-	for i in range (0,xh,1):
+	for i in range (0,10,1):
 		
 		global my_number
 		my_number=[]#清空一次没有my_number
@@ -130,8 +130,8 @@ def dlt(fp1,xh):
 	
 #======================我是分割线	
 # 创建新线程
-thread1 = myThread(1, "Thread-1", "1.txt",10)
-thread2 = myThread(2, "Thread-2", "2.txt",20)
+thread1 = myThread(1, "Thread-1", "1.txt")
+thread2 = myThread(2, "Thread-2", "2.txt")
 
 # 开启线程
 thread1.start()
