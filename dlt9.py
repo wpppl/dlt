@@ -95,7 +95,7 @@ def dlt(fp1):
 		my_number=[]#清空一次没有my_number
 		out=[]#清空一次没有out
 		print (i)
-		for m in range (0,1111111,1):#在这里可以设置循环次数
+		for m in range (0,1000000,1):#在这里可以设置循环次数
 			maicai()
 
 		duijiang(i)
