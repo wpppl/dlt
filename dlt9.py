@@ -124,7 +124,7 @@ def dlt(fp1):
 		#fp1.write(str(sort(out)))
     
 	print("游戏结束!")
-	fp.close() 
+	#fp.close() 
 	fp1.close()#修改处
 	#send('w-f108@163.com','wppplwang','13659398903@139.com','Use My Python DLT','........') #邮件发送结果调用
 	
