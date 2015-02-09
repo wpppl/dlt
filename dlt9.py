@@ -9,14 +9,21 @@ com_number=["32","12","05","01","17",["04","11"]]#这个不解释
 exitFlag = 0
 
 class myThread (threading.Thread):   #继承父类threading.Thread
-    def __init__(self, threadID, name, filename):
+    def __init__(self, threadID, name):
         threading.Thread.__init__(self)
         self.threadID = threadID
         self.name = name
-        self.filename = filename
+        
     def run(self):                   #把要执行的代码写到run函数里面 线程在创建后会直接运行run函数 
+        print ("Starting " + self.name)
+        play_dlt(self.name, self.filename)
+        print ("Exiting " + self.name)
+def play_dlt(threadName, filename):
+    
+        if exitFlag:
+            thread.exit()
         dlt(filename)
-
+        
 
 
 def send (fromail,passwd,tomail,sub,info):#邮件发送函数
