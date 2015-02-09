@@ -3,9 +3,22 @@ import random
 import time
 import smtplib,re
 from email.mime.text import MIMEText
-
+import threading
 my_number=[]
 com_number=["32","12","05","01","17",["04","11"]]#这个不解释
+exitFlag = 0
+
+class myThread (threading.Thread):   #继承父类threading.Thread
+    def __init__(self, threadID, name, counter):
+        threading.Thread.__init__(self)
+        self.threadID = threadID
+        self.name = name
+        self.counter = counter
+    def run(self):                   #把要执行的代码写到run函数里面 线程在创建后会直接运行run函数 
+        dlt()
+
+
+
 def send (fromail,passwd,tomail,sub,info):#邮件发送函数
         msg = MIMEText(info)
         msg['Subject'] = sub
@@ -107,5 +120,13 @@ def dlt(fp1):
 	fp1.close()#修改处
 	send('w-f108@163.com','wppplwang','13659398903@139.com','Use My Python DLT','........') #邮件发送结果调用
 	
-	
-dlt("123.txt")
+#======================我是分割线	
+# 创建新线程
+thread1 = myThread(1, "Thread-1", 1)
+thread2 = myThread(2, "Thread-2", 2)
+
+# 开启线程
+thread1.start()
+thread2.start()
+
+print "Exiting Main Thread"
