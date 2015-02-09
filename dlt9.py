@@ -17,7 +17,7 @@ class myThread (threading.Thread):   #继承父类threading.Thread
 		
     def run(self):                   #把要执行的代码写到run函数里面 线程在创建后会直接运行run函数 
         print ("Starting " + self.name)
-        play_dlt(self.name, self.filename,self)
+        play_dlt(self.name, self.filename)
         print ("Exiting " + self.name)
 def play_dlt(threadName, filename):
     
@@ -101,7 +101,7 @@ def duijiang(i):
         
         
     
-def dlt(fp1,xh):
+def dlt(fp1):
 	
 	
 	fp = open("ob.txt","w")
@@ -126,7 +126,7 @@ def dlt(fp1,xh):
 	print("游戏结束!")
 	fp.close() 
 	fp1.close()#修改处
-	send('w-f108@163.com','wppplwang','13659398903@139.com','Use My Python DLT','........') #邮件发送结果调用
+	#send('w-f108@163.com','wppplwang','13659398903@139.com','Use My Python DLT','........') #邮件发送结果调用
 	
 #======================我是分割线	
 # 创建新线程
