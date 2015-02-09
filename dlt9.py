@@ -110,13 +110,13 @@ def dlt(fp1):
 	
         
 	
-	for i in range (0,10,1):
+	for i in range (0,22222,1):
 		
 		global my_number
 		my_number=[]#清空一次没有my_number
 		out=[]#清空一次没有out
 		print (i)
-		for m in range (0,1000000,1):#在这里可以设置循环次数
+		for m in range (0,888888,1):#在这里可以设置循环次数
 			maicai()
 
 		duijiang(i)
