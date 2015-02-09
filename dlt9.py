@@ -5,7 +5,7 @@ import smtplib,re
 from email.mime.text import MIMEText
 import threading
 my_number=[]
-com_number=["32","12","05","01","17",["04","11"]]#这个不解释
+com_number=["29","17","16","13","07",["01","07"]]#这个不解释
 exitFlag = 0
 
 class myThread (threading.Thread):   #继承父类threading.Thread
