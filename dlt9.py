@@ -3,6 +3,9 @@ import random
 import time
 import smtplib,re
 from email.mime.text import MIMEText
+
+my_number=[]
+com_number=["32","12","05","01","17",["04","11"]]#这个不解释
 def send (fromail,passwd,tomail,sub,info):#邮件发送函数
         msg = MIMEText(info)
         msg['Subject'] = sub
@@ -79,8 +82,7 @@ def duijiang(i):
     
 def dlt(fp1):
 	
-	my_number=[]
-	com_number=["32","12","05","01","17",["04","11"]]#这个不解释
+	
 	fp = open("ob.txt","w")
 	fp1 = open(fp1,"a")#修改处
 	out=[]
@@ -88,6 +90,8 @@ def dlt(fp1):
         
 	
 	for i in range (0,20000,1):
+		
+		global my_number
 		my_number=[]#清空一次没有my_number
 		out=[]#清空一次没有out
 		print (i)
