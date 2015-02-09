@@ -104,7 +104,7 @@ def duijiang(i):
 def dlt(fp1):
 	
 	
-	fp = open("ob.txt","w")
+	#fp = open("ob.txt","w")
 	fp1 = open(fp1,"a")#修改处
 	out=[]
 	
@@ -120,7 +120,7 @@ def dlt(fp1):
 			maicai()
 
 		duijiang(i)
-		fp.write(str(out))
+		#fp.write(str(out))
 		#fp1.write(str(sort(out)))
     
 	print("游戏结束!")
