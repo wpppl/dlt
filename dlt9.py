@@ -53,14 +53,6 @@ def dlt(fp1):
 		my_number.append(my)
 		#print(my)#显示排序后的数组my
         
-		#添加排序后的数组到my_number
-		#a=time.strftime("[%Y %m %d %H:%M:%S] ",time.localtime())#长时间标签
-		#a=time.strftime("[%H:%M:%S]",time.localtime())#时间标签
-		#my_number.append(a)
-		#print(a)#显示时间标签开关
-		#time.sleep(3)#等待三秒
-		#print(my_number)#显示数组my_number
-
 	def duijiang(i):
 		global com_number
 		global my_number
@@ -88,8 +80,7 @@ def dlt(fp1):
 			#print(c,file=fp1)#修改处
 		fp1.write(c)#修改处
 			print(c)
-			#send('w-f108@163.com','wppplwang','13659398903@139.com','Use My Python',c) #邮件发送结果调用
-			#send('w-f108@163.com','wppplwang','616895616@qq.com','Use My Python',c) #邮件发送结果调用
+			
 			out.append(c)
 			#print(out)
 			my_number1=number[105:]#在此多截取了文件一次, 又在这错误 文件输出一样！修改了再看看！
@@ -116,3 +107,6 @@ def dlt(fp1):
 	fp.close() 
 	fp1.close()#修改处
 	send('w-f108@163.com','wppplwang','13659398903@139.com','Use My Python DLT','........') #邮件发送结果调用
+	
+	
+	dlt("123.txt")
