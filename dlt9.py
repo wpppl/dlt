@@ -110,7 +110,7 @@ def dlt(fp1):
 	
         
 	
-	for i in range (0,22222,1):
+	for i in range (0,11111,1):
 		
 		global my_number
 		my_number=[]#清空一次没有my_number
@@ -132,9 +132,9 @@ def dlt(fp1):
 # 创建新线程
 thread1 = myThread(1, "Thread-1", "1.txt")
 thread2 = myThread(2, "Thread-2", "2.txt")
-thread3 = myThread(3, "Thread-3", "3.txt")
+#thread3 = myThread(3, "Thread-3", "3.txt")
 # 开启线程
 thread1.start()
 thread2.start()
-thread3.start()
+#thread3.start()
 #print "Exiting Main Thread"
