@@ -69,8 +69,7 @@ def maicai():
 def duijiang(i):
     global com_number
     global my_number
-    #数组字符化
-    #txt=str(i)+".txt"
+    global fp1
     
     
     com_number=str(com_number)
@@ -91,7 +90,7 @@ def duijiang(i):
         #print(b)#显示字段com_number在my_number中的位置。
         c=number[0:132]+"\n"#显示下一个结果和前一个结果#修改处
         #print(c,file=fp1)#修改处
-		fp1.write(c)#修改处
+	fp1.write(c)#修改处
         print(c)
         #send('w-f108@163.com','wppplwang','13659398903@139.com','Use My Python',c) #邮件发送结果调用
         #send('w-f108@163.com','wppplwang','616895616@qq.com','Use My Python',c) #邮件发送结果调用
